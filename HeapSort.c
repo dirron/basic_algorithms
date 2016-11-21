@@ -11,7 +11,7 @@ int main() {
 	srand(time(NULL));
 	
 	for(i=0; i<100; i++) {
-		A[i] = rand()%99 + 1;
+		A[i] = rand()%500 + 1;
 	}
 	
 	buildheap();
@@ -55,7 +55,7 @@ void buildheap() {
 void heapsort() {
 	int i;
 	int temp;
-	for(i=n-1; i>0; i--) {
+	for(i=n-1; i>=0; i--) {
 		temp = A[0];
 		A[0] = A[i];
 		A[i] = temp;
