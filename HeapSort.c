@@ -1,12 +1,19 @@
 #include <stdio.h>
-static int k=0, n=7;
-static int A[] = {12,10,15,19,8,7,20};
+#include <time.h>
+static int k=0, n=100;
+static int A[100];
 void heapify(int i, int j);
 int max(int a, int b);
 void buildheap();
 void heapsort();
 int main() {
-	int c;
+	int i, c;
+	srand(time(NULL));
+	
+	for(i=0; i<100; i++) {
+		A[i] = rand()%99 + 1;
+	}
+	
 	buildheap();
 	heapsort();
 	for(c=0; c<n; c++)
